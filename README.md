@@ -1,7 +1,9 @@
 TutorialBase
 ============
 
-An updated version of the Parse Tutorial Starter project from raywenderlich.com.
+An updated version of the Parse Tutorial Starter project from raywenderlich.com 
+
+Link : http://www.raywenderlich.com/19341/how-to-easily-create-a-web-backend-for-your-apps-with-parse
 
 Updated for : 
 
@@ -9,7 +11,6 @@ Updated for :
  * Xcode 6 
  * Parse SDK 1.4.1
  
-Tested on Xcode (it builds :) )
+The project is empty.  It will compile, but you need to follow the tutorial to get it to work ;)
 
-The tutorial is available here : http://www.raywenderlich.com/19341/how-to-easily-create-a-web-backend-fo
-r-your-apps-with-parse
+Looking for the completed tutorial ?  See branch "completed".
