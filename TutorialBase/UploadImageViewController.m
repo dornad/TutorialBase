@@ -39,36 +39,8 @@
     [loadingSpinner startAnimating];
     [self.view addSubview:loadingSpinner];
     
+    // TODO: Upload new picture
     NSData *pictureData = UIImagePNGRepresentation(self.imgToUpload.image);
-    
-    // Upload new picture
-    // 1
-    PFFile *image = [PFFile fileWithName:@"img" data:pictureData];
-    
-    [image saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // 2
-            PFObject *wallImageObject = [PFObject objectWithClassName:@"WallImageObject"];
-            wallImageObject[@"image"] = image;
-            wallImageObject[@"user"] = [PFUser currentUser].username;
-            wallImageObject[@"comment"] = self.commentTextField.text;
-            
-            // 3
-            [wallImageObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                // 4
-                if (succeeded) {
-                    [self.navigationController popViewControllerAnimated:YES];
-                } else {
-                    [[[UIAlertView alloc] initWithTitle:@"Error" message:[error userInfo][@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-                }
-            }];
-        } else {
-            // 5
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:[error userInfo][@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }
-    } progressBlock:^(int percentDone) {
-        NSLog(@"Uploaded: %d%%", percentDone);
-    }];
 }
 
 -(void)showErrorView:(NSString *)errorMsg

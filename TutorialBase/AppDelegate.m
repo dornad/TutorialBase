@@ -14,36 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#warning Set Parse app ID and client key
-    [Parse setApplicationId:@"___" clientKey:@"___"];
-    
-//    PFObject *player = [PFObject objectWithClassName:@"Player"];
-//    player[@"Name"] = @"John";
-//    player[@"Score"] = @1230;
-//    [player save];
-    
-//    PFObject *anotherPlayer = [PFObject objectWithClassName:@"Player"];
-//    anotherPlayer[@"Name"] = @"Jack";
-//    anotherPlayer[@"Score"] = @840;
-//    [anotherPlayer saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"Object uploaded!");
-//        } else {
-//            NSLog(@"Error: %@", [error localizedDescription]);
-//        }
-//    }];
-    
-//    PFQuery *query = [PFQuery queryWithClassName:@"Player"];
-//    [query whereKey:@"Name" equalTo:@"John"];
-//    [query whereKey:@"Score" greaterThan:@1000];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            NSLog(@"Successfully retrieved: %@", objects);
-//        } else {
-//            NSLog(@"Error: %@", [error localizedDescription]);
-//        }
-//    }];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 							

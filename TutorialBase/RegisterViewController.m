@@ -30,17 +30,9 @@
 
 -(IBAction)signUpUserPressed:(id)sender
 {
-    PFUser *user = [PFUser user];
-    user.username = self.userRegisterTextField.text;
-    user.password = self.passwordRegisterTextField.text;
-    
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            [self performSegueWithIdentifier:@"SignupSuccesful" sender:self];
-        } else {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:[error userInfo][@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        }
-    }];
+    //TODO
+    //If signup sucessful:
+    [self performSegueWithIdentifier:@"SignupSuccesful" sender:self];
 }
 
 @end
